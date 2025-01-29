@@ -5,6 +5,7 @@ using GenHTTP.Modules.Compression;
 using GenHTTP.Modules.IO;
 using GenHTTP.Modules.Layouting;
 using GenHTTP.Modules.ServerCaching;
+using GenHTTP.Modules.ServerCaching.Provider;
 
 using LocalMirror.Handler;
 
@@ -15,9 +16,14 @@ public static class Project
 
     public static IHandlerBuilder Setup()
     {
-        var target = "https://cdn.jsdelivr.net/npm/";
+        var target = Environment.GetEnvironmentVariable("TARGET");
 
-        var cache = ServerCache.Persistent("./cache/").Invalidate(false);
+        if (string.IsNullOrWhiteSpace(target) || !Uri.IsWellFormedUriString(target, UriKind.Absolute))
+        {
+            throw new ArgumentException("Target URL is not specified or not a well formed URI.");
+        }
+
+        var cache = CreateCache().Invalidate(false);
 
         var compression = CompressedContent.Default()
                                            .Level(System.IO.Compression.CompressionLevel.Optimal);
@@ -34,6 +40,13 @@ public static class Project
                         .Add(clientCache);
 
         return app;
+    }
+
+    private static ServerCacheHandlerBuilder CreateCache()
+    {
+        var cacheMode = Environment.GetEnvironmentVariable("CACHE_MODE") ?? "persistent";
+
+        return (string.Compare(cacheMode, "persistent", true) == 0) ? ServerCache.Persistent("./cache/") : ServerCache.Memory();
     }
 
 }
