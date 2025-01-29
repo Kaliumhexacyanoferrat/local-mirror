@@ -34,7 +34,7 @@ public static class Project
         var proxy = Proxy.Create()
                          .Upstream(target)
                          .Add(compression)
-                         .Add(cache)
+                         //.Add(cache)
                          .Add(rangeSupport)
                          .Add(clientCache);
 
