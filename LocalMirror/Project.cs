@@ -29,12 +29,12 @@ public static class Project
 
         var rangeSupport = RangeSupport.Create();
 
-        var clientCache = ClientCache.Policy();
+        var clientCache = ClientCache.Validation();
 
         var proxy = Proxy.Create()
                          .Upstream(target)
                          .Add(compression)
-                         .Add(cache)
+                         //.Add(cache)
                          .Add(rangeSupport)
                          .Add(clientCache);
 
