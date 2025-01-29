@@ -2,6 +2,8 @@
 
 Docker service to create a network-local mirror of a remote server providing files via HTTP.
 
+![CI](https://github.com/Kaliumhexacyanoferrat/local-mirror/workflows/CI/badge.svg) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=local-mirror&metric=coverage)](https://sonarcloud.io/dashboard?id=local-mirror) [![Docker Hub](https://img.shields.io/docker/pulls/genhttp/local-mirror.svg)](https://hub.docker.com/r/genhttp/local-mirror)
+
 ## Features
 
 - Caches responses of an upstream server on local disc or in memory
@@ -33,7 +35,6 @@ Docker compose syntax:
 services:
   mirror:
     image: genhttp/local-mirror
-    restart: unless-stopped
     ports:
       - "8080:8080"
     environment:
