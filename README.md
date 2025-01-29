@@ -9,9 +9,9 @@ Docker service to create a network-local mirror of a remote server providing fil
 - Caches responses of an upstream server on local disc or in memory
 - Serves more than 100k of requests per second, depending on the size
 - Simple setup, just pass the upstream URL
-- Automatically applies `zstd`, `br` and `gzip` compression with maximum compression level
-- Supports download progress (by sending a `Content-Length`)
-- Supports download resumption (via range requests)
+- Enables `zstd`, `br` and `gzip` compression with maximum compression level
+- Enables download progress (by sending a `Content-Length`)
+- Enables download resumption (via range requests)
 - Enables client-side caching (via `eTag`)
 
 Out of scope:
