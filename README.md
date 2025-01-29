@@ -52,5 +52,5 @@ memory limit applied so this mode should only be used in a safe environment wher
 
 ## Development
 
-Local Mirror is implemented with the .NET SDK as a GenHTTP application, so it can be opened in
+Local Mirror is implemented with the .NET SDK as a [GenHTTP](https://genhttp.org) application, so it can be opened in
 Visual Studio, Visual Studio Code or Rider.
