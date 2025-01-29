@@ -20,8 +20,6 @@
   <ItemGroup>
 
     <PackageReference Include="GenHTTP.Core" Version="9.6.0" />
-
-	<PackageReference Include="GenHTTP.Modules.ReverseProxy" Version="9.6.0" />
 	<PackageReference Include="GenHTTP.Modules.ServerCaching" Version="9.6.0" />
 
   </ItemGroup>
