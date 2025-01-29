@@ -24,7 +24,7 @@ Out of scope:
 Basic usage:
 
 ```bash
-docker run -d -p 8080:8080 -e TARGET=https://cdn.jsdelivr.net/npm/ -e CACHE_MODE=persistent genhttp/local-mirror
+docker run -d -p 8080:8080 -e TARGET=https://cdn.jsdelivr.net/npm/ genhttp/local-mirror
 
 wget http://localhost:8080/jquery/dist/jquery.min.js
 ```
