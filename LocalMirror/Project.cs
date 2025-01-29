@@ -29,7 +29,7 @@ public static class Project
 
         var rangeSupport = RangeSupport.Create();
 
-        var clientCache = ClientCache.Policy();
+        var clientCache = ClientCache.Validation();
 
         var proxy = Proxy.Create()
                          .Upstream(target)
