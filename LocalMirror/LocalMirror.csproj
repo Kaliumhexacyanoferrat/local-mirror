@@ -9,9 +9,9 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <ImplicitUsings>true</ImplicitUsings>
 
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.1</Version>
 
 	<ServerGarbageCollection>true</ServerGarbageCollection>
 
@@ -19,8 +19,8 @@
 
   <ItemGroup>
 
-    <PackageReference Include="GenHTTP.Core" Version="9.6.0" />
-	<PackageReference Include="GenHTTP.Modules.ServerCaching" Version="9.6.0" />
+    <PackageReference Include="GenHTTP.Core" Version="9.6.2" />
+	<PackageReference Include="GenHTTP.Modules.ServerCaching" Version="9.6.2" />
 
   </ItemGroup>
 
